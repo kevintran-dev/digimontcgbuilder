@@ -1,0 +1,63 @@
+.DigiCard-list {
+    min-width: 1000px;
+    max-width: 1000px;
+    min-height: 340px;
+    height: 340px;
+    display: flex;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    /* position: absolute; */
+    flex-shrink: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    /* word-wrap: break-word; */
+    overflow: auto;
+    /* overflow-y: scroll */
+}
+
+.DigiCard-img {
+    max-height: 300px;
+    padding: 10px;
+    position: relative;
+}
+
+.hover-info {
+    /* display: grid; */
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: repeat(2, 1fr); */
+
+    max-width: 220px;
+    max-height: 250px;
+    margin: 0 auto;
+    overflow: auto
+}
+
+.hover-info img {
+    height: 100px;
+}
+
+.built-deck {
+    min-width: 1000px;
+    max-width: 1000px;
+    min-height: 200px;
+    /* height: 200px; */
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    flex-flow: row wrap;
+    /* position: absolute; */
+    flex-shrink: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    /* word-wrap: break-word; */
+    overflow: auto;
+    /* overflow-y: scroll */
+}
+
+.builtDeck-card {
+    max-height: 180px;
+    padding: 10px;
+    position: relative;
+}

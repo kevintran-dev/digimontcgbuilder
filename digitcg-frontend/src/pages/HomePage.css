@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(213, 208, 208);
+}
+
+.digiviceImg {
+    position: relative;
+}
+
+.digiviceImg img {
+    position: absolute;
+}
+
+#greymonImage {
+    width: 90px;
+    margin-left: -70px;
+    margin-top: 44px;
+}
+
+#digiviceImage {
+    margin-left: -160px;
+}

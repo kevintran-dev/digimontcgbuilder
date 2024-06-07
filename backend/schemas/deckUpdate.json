@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/deckUpdate.schema.json",
+  "type": "object",
+  "properties": {
+    "deck": {
+      "type": "string"
+    },
+    "deckname": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "deck"
+  ]
+}

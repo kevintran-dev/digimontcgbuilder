@@ -1,0 +1,13 @@
+.navbar {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    padding: 10px
+}
+
+.logout {
+    margin-left: auto;
+}

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <h1>
+    THIS IS THE HOMEPAGE!!!
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot when logged out 1`] = `
+<DocumentFragment>
+  <h1>
+    THIS IS THE HOMEPAGE!!!
+  </h1>
+</DocumentFragment>
+`;
