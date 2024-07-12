@@ -1,5 +1,7 @@
 import React from "react";
 
+// Load Current User's saved deck information
+
 const LoadDecksForm = ({ deck, setdeckInfo, setCurrentDeckId, setCurrentDeckName }) => {
 
     let parsedDeck = JSON.parse(deck.deck)

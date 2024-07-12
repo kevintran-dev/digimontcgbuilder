@@ -5,46 +5,45 @@ import { v4 as uuid } from "uuid";
 
 import './DigiCard.css'
 
-function DigiCard({ removeFromDeck, deckDiv, setDeckDiv, deckInfo, setdeckInfo, cardnumber, artist, attribute, card_sets, cardrarity, color, digi_type, dp, evolution_cost, image_url, level, maineffect, name, play_cost, set_name, sourceeffect, stage, type
+function DigiCard({ removeFromDeck, deckDiv, setDeckDiv, deckInfo, setdeckInfo, cardnumber, attribute, card_sets, cardrarity, color, color2, digi_type, digi_type2, digiform, dp, xros_req, evolution_cost, image_url, level, maineffect, name, play_cost, set_name, sourceeffect, stage, type
 }) {
 
 
     const [jsonData, setJSONData] = useState([])
-
+    let imgURL = `https://images.digimoncard.io/images/cards/${cardnumber}.jpg`;
 
     const contentDIV = (
         <div className="hover-info">
             <div >
                 <h3>{name}</h3>
                 <div className="card-img">
-                    <h6>Artist: {artist}</h6>
                 </div>
                 <div className="card-desc">
-                    <p>Level: {level}</p>
-                    <p>Play Cost: {play_cost}</p>
-                    <p>DP: {dp}</p>
-                    <p>Evolution Cost: {evolution_cost}</p>
-                    <p>Color: {color}</p>
-                    <p>Attribute: {attribute}</p>
-                    <p>Type: {type}</p>
-                    <p>Digi-Type: {digi_type}</p>
-                    <p>Card Rarity: {cardrarity}</p>
-                    <p>Stage: {stage}</p>
+                    {level ? <p>Level: {level}</p> : <div></div>}
+                    {play_cost ? <p>Play Cost: {play_cost}</p> : <div></div>}
+                    {dp ? <p>DP: {dp}</p> : <div></div>}
+                    {evolution_cost ? <p>Evolution Cost: {evolution_cost}</p> : <div></div>}
+                    <div>
+                        {!color2 ? <p> Colors: {color}</p> : <p>Colors: {color} / {color2}</p>}
+                    </div>
+                    {attribute ? <p>Attribute: {attribute}</p> : <div></div>}
+                    {type ? <p>Type: {type}</p> : <div></div>}
+
+                    <div>
+                        {!digi_type2 ? <p> Digi-Type: {digi_type}</p> : <p>Digi-Type: {digi_type} / {digi_type2}</p>}
+                    </div>
+                    {digiform ? <p>Form: {digiform}</p> : <div></div>}
+                    {cardrarity ? <p>Card Rarity: {cardrarity}</p> : <div></div>}
+                    {stage ? <p>Stage: {stage}</p> : <div></div>}
+                    {xros_req ? <p>Xros Requirement: {xros_req}</p> : <div></div>}
+
                 </div>
 
 
-                <p>
-                    Main Effect: {maineffect}
-                </p>
-                <p>
-                    Source Effect: {sourceeffect}
-                </p>
-                <p>
-                    Set: {set_name}
-                </p>
-                <p>
-                    Card Set: {card_sets}
-                </p>
+                {maineffect ? <p>Main Effect: {maineffect}</p> : <div></div>}
+                {sourceeffect ? <p>Source Effect: {sourceeffect}</p> : <div></div>}
+                {set_name ? <p>Set: {set_name}</p> : <div></div>}
+                {card_sets ? <p>Card Set: {card_sets}</p> : <div></div>}
             </div>
 
         </div>
@@ -53,10 +52,9 @@ function DigiCard({ removeFromDeck, deckDiv, setDeckDiv, deckInfo, setdeckInfo, 
 
     const addToDeck = async () => {
         const BuiltDeck = document.querySelector(".BuiltDeck-list")
-        let url = Object.values({ image_url })
         let cardID = uuid()
         console.log("builddeck", BuiltDeck)
-        let card = { cardnumber: cardnumber, level: level, type: type, src: image_url, id: cardID }
+        let card = { cardnumber: cardnumber, level: level, type: type, src: imgURL, id: cardID }
         setdeckInfo([...deckInfo, card])
 
     }
@@ -69,7 +67,7 @@ function DigiCard({ removeFromDeck, deckDiv, setDeckDiv, deckInfo, setdeckInfo, 
             <Popover placement="top" content={contentDIV} overlayStyle={{
 
             }}>
-                <img onClick={addToDeck} src={image_url} alt={name} className="DigiCard-img" />
+                <img onClick={addToDeck} src={imgURL} alt={name} className="DigiCard-img" />
             </Popover>
 
         </div>

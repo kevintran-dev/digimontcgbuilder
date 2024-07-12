@@ -32,6 +32,9 @@ function NavBar({ logout }) {
                     <li className='nav'>
                         <NavLink exact to="/signup">Sign Up</NavLink>
                     </li>
+                    <li className='nav'>
+                        <NavLink exact to="/testbuild">Test Build a Deck!</NavLink>
+                    </li>
                 </ul>}
 
         </>

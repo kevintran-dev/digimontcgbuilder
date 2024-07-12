@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 import HomePage from '../pages/HomePage';
 import BuildDeck from '../pages/BuildDeck';
+import TestBuildDeck from '../pages/TestBuildDeck';
 import PrivateRoute from './PrivateRoute';
 import SignupForm from '../auth/SignupForm';
 import LoginForm from '../auth/LoginForm';
@@ -20,6 +21,9 @@ const Routes = ({ signup, login }) => {
                     <LoginForm login={login} />
                 </Route>
                 <Route exact path="/logout">
+                </Route>
+                <Route exact path="/testbuild">
+                    <TestBuildDeck />
                 </Route>
                 <PrivateRoute exact path="/build">
                     <BuildDeck />
