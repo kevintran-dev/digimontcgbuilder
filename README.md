@@ -9,7 +9,7 @@ The goal of this project is to be able to build decks out of digimon cards.
 - npm start in each folder to start
 - npm test to run tests
 
-Create an account or log in to start.
+Create an account or log in to save your decks.
 
 ## What You Can Do
 - Users should be able to search for specific cards by name, type, color, attribute, or stage.
